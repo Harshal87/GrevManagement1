@@ -6,9 +6,9 @@ import { S3Client, PutObjectCommand, ListObjectsV2Command } from "https://esm.sh
 // ======= EDIT THESE =======
 const AWS_CONFIG = {
   region: "ap-south-1",           // e.g., "ap-south-1"
-  bucket: "YOUR_BUCKET",          // e.g., "grevstorage"
-  accessKeyId: "YOUR_ACCESS_KEY", // e.g., "AKIA..."
-  secretAccessKey: "YOUR_SECRET", // e.g., "xxxxxxxx"
+  bucket: "grevstorage",          // e.g., "grevstorage"
+  accessKeyId: "AKIAZAI4GQICQQM5GAXS", // e.g., "AKIA..."
+  secretAccessKey: "GejZaKnVSc6rKQfwPSZKy4zo4tli1W8Byg9PMPDZ", // e.g., "xxxxxxxx"
   prefix: "grievances/"           // folder/prefix inside the bucket
 };
 // ==========================
