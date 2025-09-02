@@ -1,0 +1,1 @@
+import { initDb, createPlaylist } from './db.js'; initDb(); console.log('Playlist:', createPlaylist('Liked Songs'));

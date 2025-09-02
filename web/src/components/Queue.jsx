@@ -1,0 +1,3 @@
+import React from 'react'
+import { useStore } from '../store'
+export default function Queue(){ const q=useStore(s=>s.queue); return (<div><h3 className="font-semibold mb-2">Queue</h3><div className="space-y-2 max-h-48 overflow-auto pr-1">{q.map((t,i)=>(<div key={i} className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10"><div className="w-8 h-8 rounded bg-white/10" /><div className="text-sm">{t.title}</div><div className="text-xs text-white/50">{t.artist}</div></div>))}{!q.length&&<div className="text-white/50 text-sm">No tracks queued.</div>}</div></div>) }
