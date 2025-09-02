@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grev Management — Single Page App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Grev Management</h1>
+    <span class="badge">S3-backed</span>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Submit Grievance</h2>
+      <form id="formGrievance">
+        <div class="grid">
+          <label>Name*<input name="name" placeholder="Your name" required /></label>
+          <label>Email*<input type="email" name="email" placeholder="you@example.com" required /></label>
+          <label>Category
+            <select name="category">
+              <option>General</option>
+              <option>Technical</option>
+              <option>Payment</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label>Description*<textarea name="description" rows="4" placeholder="Describe the issue..." required></textarea></label>
+        <label>Attachments (up to 3)
+          <input type="file" name="files" multiple />
+        </label>
+        <button type="submit">Upload to S3</button>
+      </form>
+      <p id="submitResult" class="muted"></p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Latest Submissions (S3)</h2>
+        <button id="btnRefresh">Refresh</button>
+      </div>
+      <div id="list" class="list muted">No records yet.</div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>Host this folder on EC2/Nginx. Edit credentials in <code>app.js</code> (AWS_CONFIG).</small>
+  </footer>
+
+  <!-- Load app as ES module -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
