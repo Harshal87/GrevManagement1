@@ -1,7 +1,7 @@
 // app.js — Single Page 'Grev Management' using AWS SDK v3 (Browser)
 // IMPORTANT: You said you'll embed the credentials yourself. Edit AWS_CONFIG below.
 // ⚠️ SECURITY: Putting long‑lived keys in browser code is unsafe. Use tightly scoped IAM and CORS.
-import { S3Client, PutObjectCommand, ListObjectsV2Command } from "https://esm.sh/@aws-sdk/client-s3@3.645.0";
+import { S3Client, PutObjectCommand, ListObjectsV2Command } from "https://esm.sh/@aws-sdk/client-s3@3.645.0?bundle&target=es2020&no-dts";
 
 // ======= EDIT THESE =======
 const AWS_CONFIG = {
